@@ -1,0 +1,53 @@
+﻿<Window x:Class="temperature_calculator.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:temperature_calculator"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <TabControl>
+        <TabItem Header="Kalkulator walut">
+            <StackPanel>
+                <StackPanel Orientation="Horizontal">
+                    <Label>Ilość pieniążków</Label>
+                    <TextBox Width="100" x:Name="pieniomzki"></TextBox>
+                    <Label>zł</Label>
+                </StackPanel>
+                <TextBlock>wybierz na co chcesz przeliczyć</TextBlock>
+                <RadioButton GroupName="waluta" x:Name="euro">Euro</RadioButton>
+                <RadioButton GroupName="waluta" x:Name="frank">Frank</RadioButton>
+                <RadioButton GroupName="waluta" Name="dolar">Dolar</RadioButton>
+                <Button Click="Button_Click">Oblicz</Button>
+            </StackPanel>
+        </TabItem>
+        <TabItem Header="Kalkulator temperatur">
+            <StackPanel>
+                <StackPanel Orientation="Horizontal" Margin="5">
+                    <Label>Podaj temperaturę</Label>
+                    <TextBox Width="100" x:Name="tempWej"></TextBox>
+                    <StackPanel>
+                        <RadioButton GroupName="tempWej" x:Name="cwej">°C</RadioButton>
+                        <RadioButton GroupName="tempWej" x:Name="fwej">°F</RadioButton>
+                        <RadioButton GroupName="tempWej" x:Name="kwej">°K</RadioButton>
+                    </StackPanel>
+                    <Button Click="temp">Oblicz</Button>
+                </StackPanel>
+                <Rectangle Height="1" Fill="Black"></Rectangle>
+                <StackPanel Orientation="Horizontal" Margin="5">
+                    <StackPanel Margin="5,0">
+                        <RadioButton GroupName="tempWyj" x:Name="cwyj">°C</RadioButton>
+                        <RadioButton GroupName="tempWyj" x:Name="fwyj">°F</RadioButton>
+                        <RadioButton GroupName="tempWyj" x:Name="kwyj">°K</RadioButton>
+                    </StackPanel>
+                    <TextBlock x:Name="tempWyj"></TextBlock>
+                </StackPanel>
+            </StackPanel>
+        </TabItem>
+        <TabItem Header="Obiczanie pola i obwodu">
+            <StackPanel>
+                
+            </StackPanel>
+        </TabItem>
+    </TabControl>
+</Window>
